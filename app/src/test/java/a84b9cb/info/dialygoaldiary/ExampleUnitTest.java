@@ -1,4 +1,4 @@
-package a84b9cb.info.dailygoaldiary;
+package a84b9cb.info.dialygoaldiary;
 
 import org.junit.Test;
 

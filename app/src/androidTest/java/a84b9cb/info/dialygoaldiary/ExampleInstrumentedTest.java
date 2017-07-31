@@ -1,4 +1,4 @@
-package a84b9cb.info.dailygoaldiary;
+package a84b9cb.info.dialygoaldiary;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("a84b9cb.info.dailygoaldiary", appContext.getPackageName());
+        assertEquals("a84b9cb.info.dialygoaldiary", appContext.getPackageName());
     }
 }
