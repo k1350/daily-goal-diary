@@ -2,6 +2,7 @@ package a84b9cb.info.dialygoaldiary
 
 
 import android.app.Activity
+import android.app.FragmentManager
 import android.content.Intent
 import android.os.Bundle
 import android.support.annotation.Nullable
@@ -30,9 +31,14 @@ class DiaryListFragment : Fragment() {
         }
 
         view?.findViewById<View>(R.id.date_button).setOnClickListener { view ->
-            val datePicker = DatePickerDialogFragment()
-            datePicker.setTargetFragment(this@DiaryListFragment, 100)
-            datePicker.show(fragmentManager, "datePicker")
+            // val datePicker = DatePickerDialogFragment()
+            val datePicker = YearMonthPickerDialogFragment()
+            val args = Bundle()
+            args.putInt("hoge", 1)
+            datePicker.arguments = args
+            // datePicker.setTargetFragment(this@DiaryListFragment, 100)
+            // datePicker.show(fragmentManager, "datePicker")
+            datePicker.show(fragmentManager, "tag")
         }
 
     }

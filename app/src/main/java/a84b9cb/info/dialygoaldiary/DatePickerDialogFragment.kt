@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.widget.DatePicker
 import java.util.*
 import android.support.v4.app.Fragment
+import android.view.View
 
 class DatePickerDialogFragment: DialogFragment(), DatePickerDialog.OnDateSetListener {
 
@@ -31,6 +32,9 @@ class DatePickerDialogFragment: DialogFragment(), DatePickerDialog.OnDateSetList
         val dayOfMonth = calender.get(Calendar.DAY_OF_MONTH)
 
         val datePickerDialog = DatePickerDialog(activity, this@DatePickerDialogFragment, year, month, dayOfMonth)
+        // val datePickerDialog = DatePickerDialog(activity, R.style.MySpinnerDatePickerStyle, this@DatePickerDialogFragment, year, month, dayOfMonth)
+        // val datePickerDialog = DatePickerDialog(activity, android.R.style.Theme_Holo_Light, this@DatePickerDialogFragment, year, month, dayOfMonth)
+        datePickerDialog.datePicker.maxDate = calender.timeInMillis
         return datePickerDialog
     }
 
